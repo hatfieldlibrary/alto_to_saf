@@ -1,6 +1,6 @@
 
 ```positional arguments:
-  input directory       the parent directory containing METS, ALTO, image files and PDF
+  input directory       the parent directory containing ALTO, image files and PDF
   Output SAF directory  full path to the output directory that will contain the SAF
                         subdirectories
   metadata configuration

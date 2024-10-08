@@ -1,18 +1,26 @@
+The input to this program is a directory of subdirectories that contain ALTO files 
+and corresponding images. It produces two output directories, one for METS/ALTO and 
+image files and a second with Simple Archive Format directories that are used for 
+DSpace import. The SAF files are written to a zip archive.
 
-```positional arguments:
-  input directory       the parent directory containing ALTO, image files and PDF
-  Output SAF directory  full path to the output directory that will contain the SAF
+```Convert METS/ALTO data to Simple Archive Format for DSpace import.
+
+positional arguments:
+  Input directory       The parent directory containing METS, ALTO, image files 
+                        and PDF
+  Output directory      Full path to the output directory for the processed SAF 
                         subdirectories
-  metadata configuration
-                        Metadata configuration file: current options are collegain, bulletin
+  Metadata configuration
+                        Metadata configuration file (optional). Current 
+                        configurations are "collegian", "bulletin"
 
 optional arguments:
   -h, --help            show this help message and exit
   -b BUNDLE, --bundle BUNDLE
-                        images can be added to an alternate bundle if you do not want
-                        them included in the default (ORIGINAL) bundle
+                        Images can be added to an alternate bundle if you do not 
+                        want them included in the default (ORIGINAL) bundle
   -s STRIP, --strip STRIP
-                        if provided this value will be stripped from the beginning of file
-                        names, e.g.Page_001.xml will be converted to 001.xml if the value
-                        "Page_" is provided
+                        If provided this value will be stripped from the beginning 
+                        of file names, e.g.Page_001.xml will be converted to 001.xml 
+                        if the value "Page_" is provided
 ```

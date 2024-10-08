@@ -2,7 +2,7 @@ import argparse
 
 from processor.process_data import process_files
 
-parser = argparse.ArgumentParser(description='Process METS/ALTO data for DSpace simple archive format import.')
+parser = argparse.ArgumentParser(description='Convert METS/ALTO data to Simple Archive Format for DSpace import.')
 parser.add_argument('input_dir', metavar='Input directory', type=str,
                     help='The parent directory containing METS, ALTO, image files and PDF')
 parser.add_argument('saf', metavar='Output directory', type=str,

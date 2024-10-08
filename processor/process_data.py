@@ -1,7 +1,7 @@
 import os
 import shutil
 import sys
-from pathlib import Path
+from pathlib import Path, PurePath
 from zipfile import ZipFile
 
 from config import metadata
@@ -39,17 +39,18 @@ def process_files(input_dir: str, output_dir: str, config: str, bundle: str, str
 
     print('Creating zip file.\n')
 
-    archive = output_dir + '/mets_saf_output.zip'
+    archive = output_dir + '/saf_output.zip'
 
     file_paths = get_all_file_paths(output_dir)
+
     with ZipFile(archive,'w') as zipper:
         # writing each file one by one
         for file in file_paths:
-            p = Path(file)
-            arcname = os.path.join(*p.parts[-3:])
+            p = Path(file).parts
+            arcname = os.path.join('saf', p[-3], p[-1])
             zipper.write(file, arcname)
 
-    print(f'Zip archive written to: {archive}\n')
+    print(f'SAF zip archive written to: {archive}\n')
 
     print('FINISHED\n')
 
@@ -151,10 +152,11 @@ def get_all_file_paths(directory):
 
     # crawling through directory and subdirectories
     for root, directories, files in os.walk(directory):
-        for filename in files:
-            # join the two strings in order to form the full filepath.
-            filepath = os.path.join(root, filename)
-            file_paths.append(filepath)
+        if 'saf' in root:
+            for filename in files:
+                # join the two strings in order to form the full filepath.
+                filepath = os.path.join(root, filename)
+                file_paths.append(filepath)
 
     # returning all file paths
     return file_paths

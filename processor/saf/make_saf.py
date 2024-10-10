@@ -45,7 +45,8 @@ def process_files(path: Path, saf_dir: str, bundle: str):
     :param bundle: bundle for image files
     :return:
     """
-    for file in path.glob('*'):
+    files = path.glob('*')
+    for file in sorted(files):
         if file.is_file():
             if file.name.startswith('.') or file.name.startswith('Thumbs'):  # skip . files,e.g. .DS_Store, Thumbs.db
                 continue

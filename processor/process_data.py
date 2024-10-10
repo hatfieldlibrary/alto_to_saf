@@ -100,7 +100,8 @@ def process_sub_directory_files(path: Path, output_dir: str, config: dict, strip
     if not os.path.exists(mets_dir):
         os.makedirs(mets_dir)
 
-    for file in path.glob('*'):  # recursively list directories and files
+    files = path.glob('*')
+    for file in sorted(files):  # recursively list directories and files
         if file.is_file():  # check if it's a file
 
             # skip . files,e.g. .DS_Store, Thumbs.db

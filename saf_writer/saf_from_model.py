@@ -31,7 +31,6 @@ def generate_saf(item: Item, input_directory: str, saf_directory: str, count: in
     # create the 'contents' file for this subdirectory
     contents_file = open(saf_sub_directory + '/contents', 'a')
     # copy bitstreams to the output saf subdirectory and add the file names to contents
-    print(bits)
     for bit in sorted(bits):
         file = bit['Filename']
         file_name = file
@@ -63,7 +62,6 @@ def generate_saf(item: Item, input_directory: str, saf_directory: str, count: in
     # dspace metadata schema
     root = ET.Element("dublin_core", schema='dspace')
     write_dspace = False
-    print(item.data)
     for key in item.data:
         if key.startswith('dspace.'):
             if item.data[key]:

@@ -2,7 +2,9 @@ import os
 import shutil
 import sys
 from pathlib import Path, PurePath
+from xml.sax.saxutils import escape
 from zipfile import ZipFile
+import xml.etree.cElementTree as ET
 
 from config import metadata
 from processor.mets.make_mets import create_mets_file
@@ -29,7 +31,8 @@ def process_files(input_dir: str, output_dir: str, config: str, bundle: str, str
         raise ValueError(f"The provided input directory does not exist '{path}'.")
 
     for dir_path, dir_names, files in os.walk(input_dir):
-        for directory in dir_names:
+        dirs = sorted(dir_names)
+        for directory in dirs:
             print(f'\nProcessing files in the directory: {path}/{directory}')
             # new path for subdirectory
             path = Path(dir_path + '/' + directory)
@@ -37,13 +40,13 @@ def process_files(input_dir: str, output_dir: str, config: str, bundle: str, str
             # process files in subdirectory
             process_sub_directory_files(path, sub_dir, config, strip, bundle)
 
-    print('Creating zip file.\n')
+    print('\nCreating zip file.\n')
 
     archive = output_dir + '/saf_output.zip'
 
     file_paths = get_all_file_paths(output_dir)
 
-    with ZipFile(archive,'w') as zipper:
+    with ZipFile(archive, 'w') as zipper:
         # writing each file one by one
         for file in file_paths:
             p = Path(file).parts
@@ -80,10 +83,15 @@ def process_sub_directory_files(path: Path, output_dir: str, config: dict, strip
 
     print('\nMetadata for this item:\n')
 
-    # display metadata to user
+    # display metadata to the user
     for key in local_config.keys():
-        if local_config[key]:
+        # this is a potentially common mistake caused hitting a control key while entering data.
+        bad_chars = '^['
+        if not any(c in bad_chars for c in local_config[key]):
             print(f'{key}: {local_config[key]}')
+        else:
+            print(f'ERROR: {key} contains invalid characters (^ or [). Please abort and try again.\n')
+            sys.exit('Processing cancelled.\n')
 
     # the user can continue or cancel processing
     check = input('\nHit enter to begin processing or "x" to cancel ')
@@ -149,7 +157,6 @@ def create_output_mets_directory(mets_directory):
 
 
 def get_all_file_paths(directory):
-
     # initializing empty file paths list
     file_paths = []
 
@@ -163,3 +170,4 @@ def get_all_file_paths(directory):
 
     # returning all file paths
     return file_paths
+

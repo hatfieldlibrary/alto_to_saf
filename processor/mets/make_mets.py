@@ -26,7 +26,7 @@ def mets_hdr_dmd_sec(config, createdate, fh):
         <mets:mdWrap MDTYPE="MODS" MIMETYPE="text/xml" LABEL="MODS Metadata">
             <mets:xmlData>
                 <mods:mods>
-''' % (config['title'], config['sub_title'], createdate, config['publisher'])
+''' % (attribute_escape(config['title']), attribute_escape(config['sub_title']), createdate, config['publisher'])
 
     if config['volume'] or config['issue']:
         s2 = '\t\t\t<mods:relatedItem type="host">\n\t\t\t\t<mods:part>\n'
@@ -90,8 +90,6 @@ def mets_file_group(filenames, filetype, fh):
         else:
             pageType = 'page'
 
-        # structMap +=  '          <mets:div TYPE="%s" DMDID="pageFileGrp%d" LABEL="%s %s">\n' %(pageType,
-        # fileGroupNumber, pageType, fileGroupNumber)
         struct_map += '          <mets:div TYPE="%s" DMDID="pageFileGrp%d" LABEL="Page %s">\n' % (
             pageType, file_group_number, file_group_number)
         fh.write(s)
@@ -146,7 +144,7 @@ def print_mets_file(file_group_number, filetype, the_file, foldout, fh, struct_m
 def mets_struct_map(metsstructMapdivs, bt, bst, fh):
     fh.write('<!--STRUCTURAL MAP-->\n')
     fh.write('  <mets:structMap TYPE="physical">\n')
-    fh.write('     <mets:div TYPE="book" LABEL="%s %s" DMDID="DMD1"> \n' % (bt, bst))
+    fh.write('     <mets:div TYPE="book" LABEL="%s %s" DMDID="DMD1"> \n' % (attribute_escape(bt), attribute_escape(bst)))
     fh.write(metsstructMapdivs)
     fh.write('     </mets:div> \n')
     fh.write('</mets:structMap>\n')
@@ -167,6 +165,7 @@ def create_mets_file(output_dir, config, file_names):
     :param file_names: ordered list of the base file names without extensions
     :return:
     """
+    config = sanitize_metadata(config)
     fh = open(output_dir + '/mets.xml', 'wt')
     filetype = ['jp2', 'xml']  # types of files that will end up in METS file
     createdate = time.strftime("%Y-%m-%dT%H:%M:%S")
@@ -176,3 +175,31 @@ def create_mets_file(output_dir, config, file_names):
     fh.write('</mets:mets>\n')
     print(f'\nMETS file created for directory: {output_dir}')
     fh.close()
+
+
+def sanitize_metadata(config):
+    """
+    Basic escape for all metadata inputs
+    :param config: dictionary of metadata
+    :return:
+    """
+    try:
+        for key in config.keys():
+            config[key] = config[key].replace("&", "&amp;")
+            config[key] = config[key].replace("<", "&lt;")
+            config[key] = config[key].replace(">", "&gt;")
+    except Exception as error:
+        print(error)
+
+    return config
+
+
+def attribute_escape(value):
+    """
+    Additional escaping for attribute values
+    :param value: the attribute value
+    :return:
+    """
+    value = value.replace("\"", "&quot;")
+    value = value.replace("\'", "&apos;")
+    return value

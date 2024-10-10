@@ -2,8 +2,6 @@
 collection_metadata_configs = {
     'default':{
         'title': None,
-        # If provided the subtitle is concatenated with the title. E.g. Willamette Collegian (Salem, OR), 1925-02-11
-        # In this example, the subtitle is the date.
         'sub_title': None,
         'alt_title': None,
         'date_issued': None,
@@ -16,6 +14,7 @@ collection_metadata_configs = {
         'publisher': None,
         'rights': None
     },
+
     'collegian': {
         'title': 'Willamette Collegian (Salem, OR)',
         # If provided the subtitle is concatenated with the title. E.g. Willamette Collegian (Salem, OR), 1925-02-11

@@ -13,6 +13,7 @@ dspace_metadata_schema = ('<dublin_core schema="dspace">'
 
 def mets_to_saf(input_dir: str, saf_dir: str, bundle: str):
     """
+    Converts mets/alto files to saf.
 
     :param input_dir: input directory containing mets/alto files
     :param saf_dir: output directory for saf
@@ -39,9 +40,9 @@ def mets_to_saf(input_dir: str, saf_dir: str, bundle: str):
 def process_files(path: Path, saf_dir: str, bundle: str):
     """
 
-    :param path:
-    :param saf_dir:
-    :param bundle:
+    :param path: path to the input directory
+    :param saf_dir: path to the output saf directory
+    :param bundle: bundle for image files
     :return:
     """
     for file in path.glob('*'):

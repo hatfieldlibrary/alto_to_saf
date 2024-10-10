@@ -1,7 +1,8 @@
 The input to this program is a directory of subdirectories that contain ALTO files 
-and corresponding images. It produces two output directories, one for METS/ALTO and 
-image files and a second for Simple Archive Format directories that are used for 
-DSpace import. The SAF files are written to a zip archive.
+and corresponding images. It produces two output directories: one that contains a
+newly minted METS file along with the original image files (optionally renamed) and
+the ALTO files, and a second directory for Simple Archive Format subdirectories. The  
+SAF directories are written to a zip archive for easy DSpace import.
 
 ```Convert METS/ALTO data to Simple Archive Format for DSpace import.
 

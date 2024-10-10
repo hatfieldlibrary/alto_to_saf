@@ -22,7 +22,7 @@ def generate_saf(item: Item, input_directory: str, saf_directory: str, count: in
 
     :return: void
     """
-
+    print('generate')
     # create the saf subdirectory for this item.
     saf_sub_directory = saf_directory + '/' + f"{count:04}"
     os.mkdir(saf_sub_directory)
@@ -63,6 +63,7 @@ def generate_saf(item: Item, input_directory: str, saf_directory: str, count: in
     # dspace metadata schema
     root = ET.Element("dublin_core", schema='dspace')
     write_dspace = False
+    print(item.data)
     for key in item.data:
         if key.startswith('dspace.'):
             if item.data[key]:

@@ -7,7 +7,7 @@ from processor.saf.utils.extract_metadata import ExtractMetadata
 
 # This assures that IIIF is enabled for the item.
 dspace_metadata_schema = ('<dublin_core schema="dspace">'
-                          '<dcvalue element="dspace" qualifier="iiif">true</dcvalue>'
+                          '<dcvalue element="iiif" qualifier="enabled">true</dcvalue>'
                           '</dublin_core>')
 
 
@@ -29,13 +29,11 @@ def mets_to_saf(input_dir: str, saf_dir: str, bundle: str):
     dc_metadata = metadata_extractor.extract_metadata(root)
     dc_tree = ET.ElementTree(dc_metadata)
     dc_tree.write(saf_dir + '/dublin_core.xml', encoding="UTF-8", xml_declaration="True")
-    write_contents_metadata_file(saf_dir, 'dublin_core.xml')
     path = Path(input_dir)
     process_files(path, saf_dir, bundle)
 
     with open(saf_dir + '/metadata_dspace.xml', 'w') as dspace_meta:
         dspace_meta.write(dspace_metadata_schema)
-    write_contents_metadata_file(saf_dir, 'metadata_dspace.xml')
 
 
 def process_files(path: Path, saf_dir: str, bundle: str):
@@ -58,11 +56,6 @@ def process_files(path: Path, saf_dir: str, bundle: str):
 
             if file.suffix == '.jp2':
                 write_contents_image_bundle(saf_dir, file.name, bundle)
-
-
-def write_contents_metadata_file(saf_dir, file):
-    with open(saf_dir + '/contents', 'a') as content:
-        content.write(file + '\n')
 
 
 def write_contents_other_bundle(saf_dir, file):

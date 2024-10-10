@@ -47,7 +47,7 @@ def process_files(input_dir: str, output_dir: str, config: str, bundle: str, str
         # writing each file one by one
         for file in file_paths:
             p = Path(file).parts
-            arcname = os.path.join('saf', p[-3], p[-1])
+            arcname = os.path.join('saf-import', p[-3], p[-1])
             zipper.write(file, arcname)
 
     print(f'SAF zip archive written to: {archive}\n')
@@ -66,24 +66,26 @@ def process_sub_directory_files(path: Path, output_dir: str, config: dict, strip
     :return: void
     """
     local_config = config.copy()
-    # update the local dictionary of metadata with user input
+    # The output directory for unzipped SAF files
+    saf_output_dir = 'saf_import_files_unzipped'
+
     print('\nENTER THE ITEM METADATA. This information will be added to the METS file.\n')
     for key in local_config.keys():
         if local_config[key]:
-            value = input(f"{key} (hit enter to accept default: {local_config[key]}) ") or local_config[key]
+            value = input(f" * {key} (hit enter to accept default: {local_config[key]}) ") or local_config[key]
             local_config[key] = value
         else:
-            value = input(f'{key}: ') or ''
+            value = input(f' * {key}: ') or ''
             local_config[key] = value
 
     print('\nMetadata for this item:\n')
 
-    # display metadata
+    # display metadata to user
     for key in local_config.keys():
         if local_config[key]:
             print(f'{key}: {local_config[key]}')
 
-    # the user can continue or cancel
+    # the user can continue or cancel processing
     check = input('\nHit enter to begin processing or "x" to cancel ')
     if check.lower() == 'x':
         sys.exit('Processing cancelled.\n')
@@ -94,7 +96,7 @@ def process_sub_directory_files(path: Path, output_dir: str, config: dict, strip
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
     mets_dir = output_dir + '/' + 'mets_alto'
-    saf_dir = output_dir + '/' + 'saf'
+    saf_dir = output_dir + '/' + saf_output_dir
     if not os.path.exists(mets_dir):
         os.makedirs(mets_dir)
 
@@ -152,7 +154,7 @@ def get_all_file_paths(directory):
 
     # crawling through directory and subdirectories
     for root, directories, files in os.walk(directory):
-        if 'saf' in root:
+        if 'saf_import_files_unzipped' in root:
             for filename in files:
                 # join the two strings in order to form the full filepath.
                 filepath = os.path.join(root, filename)

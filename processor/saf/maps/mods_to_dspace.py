@@ -118,8 +118,8 @@ class DBFieldMaps:
         },
         # Maps mets "note" with type "statement of responsibility" to description:statementofresponsibility
         switch_tag['statement_of_responsibility'].get('id'): {
-            'element': dspace_dc_field['description'],
-            'qualifier': dspace_dc_field['description_statement_responsibility_qualifier']
+            'element': dspace_dc_field['publisher'],
+            'qualifier': None
         },
         processor_field['item_details_element']: {
             'element': 'identifier',

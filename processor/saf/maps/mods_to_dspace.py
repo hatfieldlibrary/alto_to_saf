@@ -70,6 +70,10 @@ class DBFieldMaps:
             'element': dspace_dc_field['date'],
             'qualifier': dspace_dc_field['date_created_qualifier']
         },
+        processor_field['description_element']: {
+            'element': dspace_dc_field['description'],
+            'qualifier': dspace_dc_field['abstract']
+        },
         # Maps the database id (existdb) to relation:requires.
         switch_tag['database_relation'].get('id'): {
             'element': dspace_dc_field['relation'],

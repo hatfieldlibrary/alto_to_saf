@@ -53,6 +53,7 @@ def mets_hdr_dmd_sec(config, createdate, fh):
                         <mods:title>%s</mods:title>
                         <mods:subTitle>%s</mods:subTitle>
                     </mods:titleInfo>
+                    <mods:abstract>%s</mods:abstract>
                     <mods:physicalDescription>   
                           <mods:extent>%s</mods:extent>
                     </mods:physicalDescription>  
@@ -63,7 +64,7 @@ def mets_hdr_dmd_sec(config, createdate, fh):
         </mets:mdWrap>
     </mets:dmdSec>\n''' % (
         config['rights'], config['publisher'],config['date_issued'], config['date_created'], config['title'], config['sub_title'],
-        config['dimensions'], config['type'])
+        config['description'], config['dimensions'], config['type'])
 
     fh.write(s1 + s2 + s3)
 

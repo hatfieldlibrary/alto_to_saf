@@ -16,9 +16,11 @@ class DBFields:
         'item_details_element': 'mods:detail',
         'date_issued_element': 'mods:dateIssued',
         'date_created_element': 'mods:dateCreated',
+        'abstract_element': 'mods:abstract',
         'note_element': 'mods:note',
         'access_conditions_element': 'mods:accessCondition',
         'language_element': 'mods:languageTerm',
+        'title_element': 'mods:title',
         'sub_title_element': 'mods:subTitle',
         'physical_description_element': 'mods:physicalDescription',
         'physical_extent_element': 'mods:extent',
@@ -34,7 +36,8 @@ class DBFields:
         'encoding_attr': 'encoding',
         'qualifier_attr': 'qualifier',
         'code_attr': 'code',
-        'authority_attr': 'authority'
+        'authority_attr': 'authority',
+        'display_attr': 'displayLabel'
     }
 
     # Mets structural elements and attributes
@@ -61,6 +64,7 @@ class DBFields:
         'item_number_element': 'number',
         'date_issued_element': 'dateIssued',
         'date_created_element': 'dateCreated',
+        'description_element': 'abstract',
         'note_element': 'note',
         'statement_responsibility_element': 'note',
         'access_conditions_element': 'accessCondition',
@@ -105,6 +109,11 @@ class DBFields:
             'attr': mets_mods_element_attrs['type_attr'],
             'attr_val': ['text', 'code']
         },
+        mets_mods_elements['abstract_element']: {
+            'element': mets_mods_elements['abstract_element'],
+            'attr': None,
+            'attr_val': None
+        },
         mets_mods_elements['note_element']: {
             'element': mets_mods_elements['note_element'],
             'attr': mets_mods_element_attrs['type_attr'],
@@ -145,6 +154,7 @@ class DBFields:
         'title_alt_qualifier': 'alternative',
         'creator': 'creator',
         'description': 'description',
+        'abstract': 'abstract',
         'description_statement_of_responsibility': 'description',
         'description_provenance_qualifier': 'provenance',
         'description_statement_responsibility_qualifier': 'statementofresponsibility',

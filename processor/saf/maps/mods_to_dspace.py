@@ -116,7 +116,7 @@ class DBFieldMaps:
             'element': dspace_dc_field['format'],
             'qualifier': dspace_dc_field['format_extent_qualifier'],
         },
-        # Maps mets "note" with type "statement of responsibility" to description:statementofresponsibility
+        # Maps mets "note" with type "statement of responsibility" to dc.publisher
         switch_tag['statement_of_responsibility'].get('id'): {
             'element': dspace_dc_field['publisher'],
             'qualifier': None

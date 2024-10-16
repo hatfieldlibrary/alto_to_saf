@@ -2,9 +2,16 @@ import argparse
 
 from processor.process_data import process_files
 
-parser = argparse.ArgumentParser(description='Convert METS/ALTO data to Simple Archive Format for DSpace import.')
+"""
+The program will create a METS file and requires user metadata input. The
+resulting METS file, ALTO files and images are copied to an output SAF directory
+(or directories) and zip file that can be imported into DSpace.
+"""
+
+parser = argparse.ArgumentParser(description='Converts a directory of alto and image files to Simple Archive Format '
+                                             'for DSpace import.')
 parser.add_argument('input_dir', metavar='Input directory', type=str,
-                    help='The parent directory containing METS, ALTO, image files and PDF')
+                    help='The parent directory containing ALTO, image files and PDF')
 parser.add_argument('saf', metavar='Output directory', type=str,
                     help='Full path to the output directory for the processed SAF subdirectories')
 parser.add_argument('-m', '--metadata',

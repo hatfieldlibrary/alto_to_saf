@@ -1,6 +1,12 @@
 import time
 import re
 
+"""
+This code is based on Sara Amato's original python code for creating METS files.
+It uses string interpolation for simplicity. This means that the metadata inputs
+need to be XML encoded. 
+"""
+
 
 def mets_hdr_dmd_sec(config, createdate, fh):
     s1 = '''\
@@ -31,9 +37,11 @@ def mets_hdr_dmd_sec(config, createdate, fh):
     if config['volume'] or config['issue']:
         s2 = '\t\t\t<mods:relatedItem type="host">\n\t\t\t\t<mods:part>\n'
         if (config['volume'] != ''):
-            s2 = s2 + '\t\t\t\t\t<mods:detail type="volume"><mods:number>%s</mods:number></mods:detail>\n' % (config['volume'])
+            s2 = s2 + '\t\t\t\t\t<mods:detail type="volume"><mods:number>%s</mods:number></mods:detail>\n' % (
+            config['volume'])
         if (config['issue'] != ''):
-            s2 = s2 + '\t\t\t\t\t<mods:detail type="issue"><mods:number>%s</mods:number></mods:detail>\n' % (config['issue'])
+            s2 = s2 + '\t\t\t\t\t<mods:detail type="issue"><mods:number>%s</mods:number></mods:detail>\n' % (
+            config['issue'])
 
         s2 = s2 + "\t\t\t\t</mods:part>\n\t\t\t</mods:relatedItem>\n"
     else:
@@ -63,7 +71,8 @@ def mets_hdr_dmd_sec(config, createdate, fh):
             </mets:xmlData>
         </mets:mdWrap>
     </mets:dmdSec>\n''' % (
-        config['rights'], config['publisher'],config['date_issued'], config['date_created'], config['title'], config['sub_title'],
+        config['rights'], config['publisher'], config['date_issued'], config['date_created'], config['title'],
+        config['sub_title'],
         config['description'], config['dimensions'], config['type'])
 
     fh.write(s1 + s2 + s3)
@@ -98,7 +107,7 @@ def mets_file_group(filenames, filetype, fh):
         # printing the mets filegroup and loading up the structMap all in one to keep consistent naming/structure and
         # dry
         struct_map = print_mets_file(file_group_number, filetype, my_file, 0, fh,
-                                    struct_map)  # note that foldout is always 0 (no) here
+                                     struct_map)  # note that foldout is always 0 (no) here
 
         #### check here for if next is a foldout then write those files here and increment count
         foldout = re.compile('(foldout)(.*)')  # 007_foldouta => foldout, a
@@ -109,7 +118,7 @@ def mets_file_group(filenames, filetype, fh):
             fileGroupNumberFoldout = str(file_group_number) + foldout.search(filenames[localcount + 1]).group(
                 2)  # append 'a', etc to fileGroupNumber
             struct_map = print_mets_file(fileGroupNumberFoldout, filetype, filenames[localcount + 1], 1, fh,
-                                        struct_map)  # foldout always 1 (yes) here
+                                         struct_map)  # foldout always 1 (yes) here
             skip += 1  # skip this one which is next up in loop
             localcount += 1
 
@@ -145,7 +154,8 @@ def print_mets_file(file_group_number, filetype, the_file, foldout, fh, struct_m
 def mets_struct_map(metsstructMapdivs, bt, bst, fh):
     fh.write('<!--STRUCTURAL MAP-->\n')
     fh.write('  <mets:structMap TYPE="physical">\n')
-    fh.write('     <mets:div TYPE="book" LABEL="%s %s" DMDID="DMD1"> \n' % (attribute_escape(bt), attribute_escape(bst)))
+    fh.write(
+        '     <mets:div TYPE="book" LABEL="%s %s" DMDID="DMD1"> \n' % (attribute_escape(bt), attribute_escape(bst)))
     fh.write(metsstructMapdivs)
     fh.write('     </mets:div> \n')
     fh.write('</mets:structMap>\n')
@@ -162,7 +172,7 @@ def create_mets_file(output_dir, config, file_names):
     Creates a mets file using the provided metadata configuration and root file names.
 
     :param output_dir: the full path to the output directory for the item being processed
-    :param config: metadata values to be added to mods section
+    :param config: metadata values to be added to mods section (be sure to apply the required XML encoding)
     :param file_names: ordered list of the base file names without extensions
     :return:
     """

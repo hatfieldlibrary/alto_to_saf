@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 import xml.etree.ElementTree as ET
 from collections import Iterable
 from xml.etree.ElementTree import Element
@@ -10,14 +8,18 @@ from processor.saf.maps.mods_to_dspace import DBFieldMaps
 
 
 class ExtractMetadata:
+    """
+    This class is derived from code used during the migration of METS/ALTO
+    data from an earlier system into DSpace.
+    """
     ns = {'mets': 'http://www.loc.gov/METS/',
           'mods': 'http://www.loc.gov/mods/v3'}
 
     def __init__(self):
         """
-        Contructor sets the instance fields for metadata mapping.
+        Constructor sets the instance fields for metadata mapping.
         """
-        #self.extract_page = ExtractExistFullText()
+
         fieldmap = DBFieldMaps()
         self.ds_field_map = fieldmap.ds_field_map
         self.switch_tag = fieldmap.switch_tag
@@ -175,7 +177,6 @@ class ExtractMetadata:
                     sub_element.text = defaults[element].get('value')
 
     def __get_mods_element(self, field, section):
-        # type: (Object, Element) -> Element
         """
         Extracts and returns sub-element from mets record.
 
@@ -195,7 +196,6 @@ class ExtractMetadata:
             return section.findall(qry, self.ns)
 
     def extract_metadata(self, record):
-        # type: (Element, str) -> Element
         """
         Extracts metadata from the METS record.
 

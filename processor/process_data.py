@@ -1,14 +1,12 @@
 import os
 import shutil
 import sys
-from pathlib import Path, PurePath
-from xml.sax.saxutils import escape
+from pathlib import Path
 from zipfile import ZipFile
-import xml.etree.cElementTree as ET
 
 from config import metadata
 from processor.mets.make_mets import create_mets_file
-from processor.saf.make_saf import mets_to_saf
+from processor.saf.make_saf import to_saf
 
 
 def process_files(input_dir: str, output_dir: str, config: str, bundle: str, strip: str):
@@ -103,53 +101,55 @@ def process_sub_directory_files(path: Path, output_dir: str, config: dict, strip
     # create output directory
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
-    mets_dir = output_dir + '/' + 'mets_alto'
+    mets_alto_dir = output_dir + '/' + 'mets_alto'
     saf_dir = output_dir + '/' + saf_output_dir
-    if not os.path.exists(mets_dir):
-        os.makedirs(mets_dir)
+    if not os.path.exists(mets_alto_dir):
+        os.makedirs(mets_alto_dir)
 
     files = path.glob('*')
     for file in sorted(files):  # recursively list directories and files
         if file.is_file():  # check if it's a file
 
-            # skip . files,e.g. .DS_Store, Thumbs.db
+            # Skip . files,e.g. .DS_Store, Thumbs.db
             if file.name.startswith('.') or file.name.startswith('Thumbs'):
                 continue
-            # remove file name prefix if required
+            # Remove file name prefix if required
             if strip:
                 file_name = file.name.replace(strip, '')
             else:
                 file_name = file.name
 
-            # add to the set of file names without extensions
+            # Add to the set of file names. The set will be used when
+            # generating the METS file. Drop the file extension.
             filenames.add(file_name.replace(file.suffix, ''))
 
-            # update the JPEG2000 extension
+            # Update the JPEG2000 extension and copy to the output mets/alto directory
             if file.suffix == '.j2k':
                 new_file_name = file_name.replace('j2k', 'jp2')
-                shutil.copy(file, mets_dir + '/' + new_file_name)
+                copy_to_mets_alto_dir(file, mets_alto_dir + '/' + new_file_name)
 
-            # exclude pdf files
+            # Copy other files to the output mets/alto directory, excluding the single page pdf files
             elif file.suffix != '.pdf':
-                shutil.copy(file, mets_dir + '/' + file_name)
+                copy_to_mets_alto_dir(file, mets_alto_dir + '/' + file_name)
 
-    # ordered list of file names without extensions.
+    # Create an ordered list of file names.
     file_names_list = list(sorted(filenames))
 
-    # generate the mets file
-    create_mets_file(mets_dir, local_config, file_names_list)
-    print(f'All files copied to {mets_dir}')
+    # Generate the METS file based on the provided metadata and the list of file names.
+    # The METS file is written to the mets_alto directory.
+    create_mets_file(mets_alto_dir, local_config, file_names_list)
+    print(f'All files copied to {mets_alto_dir}')
 
-    # create saf directory
-    generate_saf(mets_dir, saf_dir, bundle)
+    # Create files in the output saf directory.
+    generate_saf(mets_alto_dir, saf_dir, bundle)
 
     print('Processing complete.')
 
 
 def generate_saf(input_dir, saf_dir, bundle):
-    print(f'\nGenerating SAF directory in {saf_dir}')
-    mets_to_saf(input_dir, saf_dir, bundle)
-    print(f'SAF directory created in {saf_dir}\n')
+    print(f'\nGenerating SAF files in {saf_dir}')
+    to_saf(input_dir, saf_dir, bundle)
+    print(f'SAF import created in {saf_dir}\n')
 
 
 def create_output_mets_directory(mets_directory):
@@ -171,3 +171,13 @@ def get_all_file_paths(directory):
     # returning all file paths
     return file_paths
 
+
+def copy_to_mets_alto_dir(file_location, file_destination):
+    try:
+        shutil.copy(file_location, file_destination)
+    except shutil.Error as e:
+        print(f"Error occurred during copying: {e}")
+    except FileNotFoundError:
+        print("Source file not found.")
+    except PermissionError:
+        print("Permission denied while copying.")

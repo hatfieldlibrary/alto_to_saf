@@ -5,15 +5,19 @@ from pathlib import Path
 
 from processor.saf.utils.extract_metadata import ExtractMetadata
 
-# This assures that IIIF is enabled for the item.
+# A 'metadata_dspace.xml' file will be created with this value. This assures
+# that IIIF is enabled for the item.
 dspace_metadata_schema = ('<dublin_core schema="dspace">'
                           '<dcvalue element="iiif" qualifier="enabled">true</dcvalue>'
                           '</dublin_core>')
 
 
-def mets_to_saf(input_dir: str, saf_dir: str, bundle: str):
+def to_saf(input_dir: str, saf_dir: str, bundle: str):
     """
-    Converts mets/alto files to saf.
+    Creates SAF import files from the contents of a directory of mets/alto files.
+    The input directory must contain files for a single item (not multiple items).
+    Dublin Core metadata is extracted from the METS file. The saf 'contents'
+    file is generated. All files are copied to the saf output directory.
 
     :param input_dir: input directory containing mets/alto files
     :param saf_dir: output directory for saf

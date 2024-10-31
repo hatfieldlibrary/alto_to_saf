@@ -2,7 +2,6 @@ import xml.etree.ElementTree as ET
 from collections import Iterable
 from xml.etree.ElementTree import Element
 
-from processor.saf.maps.default_field_values import DefaultFieldValueMap
 from processor.saf.maps.field_maps import DBFields
 from processor.saf.maps.mods_to_dspace import DBFieldMaps
 
@@ -60,7 +59,7 @@ class ExtractMetadata:
             if citation_type == 'edition':
                 self.citation += ' edition ' + element[0].text
         else:
-            print('Missing citation for %s in: %s'%(citation_type, self.item_title_attrib))
+            print('Missing citation for %s in: %s' % (citation_type, self.item_title_attrib))
 
     def __process_iterable_map(self, parent_element, elements, element_map):
         # type: (Element, Iterable, dict) -> None
@@ -113,8 +112,8 @@ class ExtractMetadata:
                     elif element.tag == processor_field['resource_genre_element']:
                         if attribute_names['authority_attr'] in element.attrib:
                             self.add_sub_element(parent_element,
-                                             element_map[self.switch_tag['resource_genre_element'].get('id')],
-                                             element.text)
+                                                 element_map[self.switch_tag['resource_genre_element'].get('id')],
+                                                 element.text)
                     elif element.tag == processor_field['note_element']:
                         # Note elements contain statement of responsibility (which maps to a dspace dublin
                         # core field)
@@ -137,44 +136,8 @@ class ExtractMetadata:
                         else:
                             self.add_sub_element(parent_element, element_map[element.tag], element.text)
                     else:
-
                         # Just add the new sub-element.
                         self.add_sub_element(parent_element, element_map[element.tag], element.text)
-
-    def __add_default_metadata(self, dublin_core):
-        # type: (Element) -> None
-        """
-        If the record doesn't include a field that has a defined
-        default value, add a new sub-element to the saf dublin_core.xml.
-        :param dublin_core: the current saf xml
-        :return: updated saf xml
-        """
-        # Default values to check
-        defaults = DefaultFieldValueMap.default_values
-
-        for element in defaults.keys():
-            attribute = defaults[element].get('attr')
-            if attribute is not None:
-                qry = ".//dcvalue[@qualifier='%s']" %defaults[element].get('attr_val')
-            else:
-                qry = ".//dcvalue[@element='%s']"%element
-
-            e = dublin_core.findall(qry)
-
-            # If element not found, add default.
-            if len(e) == 0:
-                if attribute is not None:
-                    # Add more attribute conditions here as needed...
-                    if attribute == 'statement of responsibility':
-                        # Add new element to parent, using the switch map for description:statementofresponsibility
-                        self.add_sub_element(dublin_core,
-                                             self.ds_field_map[self.switch_tag['statement_of_responsibility'].get('id')],
-                                             defaults[element].get('value'))
-                else:
-                    # Add new element to parent sans attributes
-                    sub_element = ET.SubElement(dublin_core, 'dcvalue')
-                    sub_element.set('element', element)
-                    sub_element.text = defaults[element].get('value')
 
     def __get_mods_element(self, field, section):
         """
@@ -192,7 +155,7 @@ class ExtractMetadata:
             qry = ".//%s[@%s='%s']" % (element, attr, attr_val[0])
             return section.findall(qry, self.ns)
         else:
-            qry = ".//%s"%element
+            qry = ".//%s" % element
             return section.findall(qry, self.ns)
 
     def extract_metadata(self, record):
@@ -213,7 +176,7 @@ class ExtractMetadata:
         dublin_core.set('schema', 'dc')
 
         # Add the existdb item id. Uses the switch tag id for dublin core mapping.
-        #self.add_sub_element(dublin_core,
+        # self.add_sub_element(dublin_core,
         #                     self.ds_field_map[self.switch_tag['exist_db_id'].get('id')])
 
         # Set the relation:requires field for existdb. (This DC field will tell the application
@@ -266,8 +229,5 @@ class ExtractMetadata:
             self.add_sub_element(dublin_core, self.ds_field_map['detail'], self.citation)
             # clear member variable for use in next record.
             self.citation = ''
-
-        # Add any missing values, using the defaults.
-        self.__add_default_metadata(dublin_core)
 
         return dublin_core

@@ -22,10 +22,20 @@ parser.add_argument('-b',  "--bundle",
 parser.add_argument('-s',  "--strip",
                     help='If provided this value will be stripped from the beginning of file names, e.g.'
                          'Page_001.xml will be converted to 001.xml if the value "Page_" is provided')
+parser.add_argument('-f', '--format',
+                    help='Use this flag to override the default image format added to the DSpace import directory. The default value is jp2.'
+                         'You can override this to use jpg files.')
+parser.add_argument('-p', action='store_true',
+                    help='If this flag is present the file name will be padded with zeros. This may be used in combination with '
+                         '"strip" if necessary, e.g. Page_1.xml will be converted to 001.xml.')
+parser.add_argument('-c', action='store_true',
+                    help='If this flag is added a jpg image will be created from the JPEG2000 image of the first page'
+                         'in the document.')
 
 args = parser.parse_args()
 directory = args.input_dir
 saf = args.saf
 
-process_files(directory.rstrip('/'), saf.rstrip('/'), args.metadata, args.bundle, args.strip)
+
+process_files(directory.rstrip('/'), saf.rstrip('/'), args.metadata, args.bundle, args.strip, args.format, args.p, args.c)
 

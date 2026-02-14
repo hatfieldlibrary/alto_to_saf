@@ -1,0 +1,363 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<alto xmlns="http://schema.ccs-gmbh.com/ALTO">
+  <Description>
+    <MeasurementUnits>pixel</MeasurementUnits>
+    <sourceImageInformation>
+      <fileName>Page_7.jpg</fileName>
+    </sourceImageInformation>
+    <OCRProcessing>
+      <ocrProcessingStep>
+        <processingDateTime>2026-01-22</processingDateTime>
+        <processingSoftware>
+          <softwareCreator>Amazon AWS</softwareCreator>
+          <softwareName>Textract</softwareName>
+        </processingSoftware>
+      </ocrProcessingStep>
+    </OCRProcessing>
+  </Description>
+  <Layout>
+    <Page ID="Page1">
+      <TextLine HEIGHT="149" WIDTH="791" VPOS="221" HPOS="1295">
+        <String HEIGHT="149" WIDTH="791" VPOS="221" HPOS="1295" Content="LIFESTYLES"/>
+      </TextLine>
+      <TextLine HEIGHT="33" WIDTH="22" VPOS="326" HPOS="3014">
+        <String HEIGHT="33" WIDTH="22" VPOS="326" HPOS="3014" Content="6"/>
+      </TextLine>
+      <TextLine HEIGHT="122" WIDTH="1398" VPOS="453" HPOS="583">
+        <String HEIGHT="121" WIDTH="335" VPOS="453" HPOS="583" Content="Spring"/>
+        <String HEIGHT="92" WIDTH="429" VPOS="453" HPOS="927" Content="Wanders"/>
+        <String HEIGHT="90" WIDTH="192" VPOS="454" HPOS="1377" Content="into"/>
+        <String HEIGHT="119" WIDTH="389" VPOS="454" HPOS="1591" Content="Campus"/>
+      </TextLine>
+      <TextLine HEIGHT="46" WIDTH="438" VPOS="487" HPOS="2709">
+        <String HEIGHT="45" WIDTH="205" VPOS="488" HPOS="2709" Content="Skeet"/>
+        <String HEIGHT="46" WIDTH="211" VPOS="487" HPOS="2937" Content="STARR"/>
+      </TextLine>
+      <TextLine HEIGHT="46" WIDTH="513" VPOS="578" HPOS="2633">
+        <String HEIGHT="45" WIDTH="248" VPOS="578" HPOS="2633" Content="SPORTS"/>
+        <String HEIGHT="45" WIDTH="236" VPOS="579" HPOS="2910" Content="EDITOR"/>
+      </TextLine>
+      <TextLine HEIGHT="58" WIDTH="2185" VPOS="624" HPOS="191">
+        <String HEIGHT="44" WIDTH="89" VPOS="625" HPOS="191" Content="The"/>
+        <String HEIGHT="54" WIDTH="198" VPOS="627" HPOS="291" Content="equinox"/>
+        <String HEIGHT="43" WIDTH="166" VPOS="628" HPOS="500" Content="arrives"/>
+        <String HEIGHT="42" WIDTH="48" VPOS="628" HPOS="677" Content="in"/>
+        <String HEIGHT="31" WIDTH="27" VPOS="639" HPOS="738" Content="a"/>
+        <String HEIGHT="45" WIDTH="86" VPOS="625" HPOS="776" Content="few"/>
+        <String HEIGHT="56" WIDTH="122" VPOS="625" HPOS="873" Content="days,"/>
+        <String HEIGHT="45" WIDTH="94" VPOS="625" HPOS="1007" Content="and"/>
+        <String HEIGHT="33" WIDTH="129" VPOS="637" HPOS="1112" Content="some"/>
+        <String HEIGHT="45" WIDTH="51" VPOS="625" HPOS="1251" Content="of"/>
+        <String HEIGHT="45" WIDTH="78" VPOS="625" HPOS="1308" Content="the"/>
+        <String HEIGHT="57" WIDTH="201" VPOS="624" HPOS="1398" Content="campus'"/>
+        <String HEIGHT="45" WIDTH="177" VPOS="625" HPOS="1613" Content="natural"/>
+        <String HEIGHT="45" WIDTH="195" VPOS="626" HPOS="1799" Content="features"/>
+        <String HEIGHT="45" WIDTH="113" VPOS="626" HPOS="2006" Content="have"/>
+        <String HEIGHT="57" WIDTH="154" VPOS="625" HPOS="2130" Content="finally"/>
+        <String HEIGHT="32" WIDTH="80" VPOS="639" HPOS="2295" Content="no-"/>
+      </TextLine>
+      <TextLine HEIGHT="60" WIDTH="1538" VPOS="687" HPOS="515">
+        <String HEIGHT="52" WIDTH="133" VPOS="689" HPOS="515" Content="ticed,"/>
+        <String HEIGHT="56" WIDTH="155" VPOS="687" HPOS="662" Content="(much"/>
+        <String HEIGHT="43" WIDTH="110" VPOS="689" HPOS="828" Content="later"/>
+        <String HEIGHT="44" WIDTH="114" VPOS="689" HPOS="947" Content="than"/>
+        <String HEIGHT="44" WIDTH="78" VPOS="689" HPOS="1072" Content="the"/>
+        <String HEIGHT="45" WIDTH="277" VPOS="689" HPOS="1163" Content="Californian"/>
+        <String HEIGHT="45" WIDTH="204" VPOS="689" HPOS="1451" Content="students"/>
+        <String HEIGHT="45" WIDTH="105" VPOS="702" HPOS="1667" Content="may"/>
+        <String HEIGHT="44" WIDTH="113" VPOS="689" HPOS="1780" Content="have"/>
+        <String HEIGHT="56" WIDTH="149" VPOS="687" HPOS="1905" Content="liked)."/>
+      </TextLine>
+      <TextLine HEIGHT="56" WIDTH="491" VPOS="787" HPOS="1836">
+        <String HEIGHT="44" WIDTH="88" VPOS="788" HPOS="1836" Content="The"/>
+        <String HEIGHT="56" WIDTH="184" VPOS="787" HPOS="1936" Content="daphne"/>
+        <String HEIGHT="32" WIDTH="110" VPOS="799" HPOS="2131" Content="near"/>
+        <String HEIGHT="44" WIDTH="78" VPOS="787" HPOS="2250" Content="the"/>
+      </TextLine>
+      <TextLine HEIGHT="58" WIDTH="674" VPOS="826" HPOS="253">
+        <String HEIGHT="43" WIDTH="132" VPOS="830" HPOS="253" Content="Drew"/>
+        <String HEIGHT="44" WIDTH="250" VPOS="828" HPOS="393" Content="Alexander"/>
+        <String HEIGHT="55" WIDTH="102" VPOS="826" HPOS="656" Content="('26)"/>
+        <String HEIGHT="57" WIDTH="158" VPOS="827" HPOS="769" Content="finally"/>
+      </TextLine>
+      <TextLine HEIGHT="57" WIDTH="501" VPOS="851" HPOS="1832">
+        <String HEIGHT="45" WIDTH="228" VPOS="851" HPOS="1832" Content="botanical"/>
+        <String HEIGHT="56" WIDTH="168" VPOS="852" HPOS="2071" Content="garden"/>
+        <String HEIGHT="44" WIDTH="83" VPOS="851" HPOS="2250" Content="has"/>
+      </TextLine>
+      <TextLine HEIGHT="57" WIDTH="755" VPOS="891" HPOS="210">
+        <String HEIGHT="45" WIDTH="162" VPOS="891" HPOS="210" Content="breaks"/>
+        <String HEIGHT="36" WIDTH="79" VPOS="899" HPOS="384" Content="out"/>
+        <String HEIGHT="44" WIDTH="78" VPOS="892" HPOS="473" Content="the"/>
+        <String HEIGHT="55" WIDTH="111" VPOS="893" HPOS="559" Content="jorts"/>
+        <String HEIGHT="32" WIDTH="50" VPOS="904" HPOS="682" Content="as"/>
+        <String HEIGHT="49" WIDTH="221" VPOS="898" HPOS="744" Content="tempera-"/>
+      </TextLine>
+      <TextLine HEIGHT="57" WIDTH="538" VPOS="914" HPOS="1815">
+        <String HEIGHT="44" WIDTH="117" VPOS="914" HPOS="1815" Content="been"/>
+        <String HEIGHT="55" WIDTH="185" VPOS="916" HPOS="1944" Content="peering"/>
+        <String HEIGHT="44" WIDTH="116" VPOS="914" HPOS="2140" Content="from"/>
+        <String HEIGHT="45" WIDTH="86" VPOS="914" HPOS="2267" Content="last"/>
+      </TextLine>
+      <TextLine HEIGHT="59" WIDTH="704" VPOS="952" HPOS="236">
+        <String HEIGHT="38" WIDTH="124" VPOS="961" HPOS="236" Content="tures"/>
+        <String HEIGHT="32" WIDTH="176" VPOS="966" HPOS="372" Content="narrow"/>
+        <String HEIGHT="42" WIDTH="48" VPOS="956" HPOS="559" Content="in"/>
+        <String HEIGHT="32" WIDTH="61" VPOS="966" HPOS="619" Content="on"/>
+        <String HEIGHT="43" WIDTH="86" VPOS="956" HPOS="691" Content="60°."/>
+        <String HEIGHT="59" WIDTH="149" VPOS="952" HPOS="791" Content="(right)"/>
+      </TextLine>
+      <TextLine HEIGHT="57" WIDTH="493" VPOS="976" HPOS="1837">
+        <String HEIGHT="44" WIDTH="236" VPOS="977" HPOS="1837" Content="summer's"/>
+        <String HEIGHT="44" WIDTH="131" VPOS="989" HPOS="2084" Content="grave"/>
+        <String HEIGHT="45" WIDTH="68" VPOS="976" HPOS="2225" Content="for"/>
+        <String HEIGHT="31" WIDTH="28" VPOS="989" HPOS="2303" Content="a"/>
+      </TextLine>
+      <TextLine HEIGHT="56" WIDTH="480" VPOS="1040" HPOS="1844">
+        <String HEIGHT="55" WIDTH="159" VPOS="1041" HPOS="1844" Content="couple"/>
+        <String HEIGHT="44" WIDTH="50" VPOS="1040" HPOS="2015" Content="of"/>
+        <String HEIGHT="49" WIDTH="159" VPOS="1041" HPOS="2071" Content="weeks,"/>
+        <String HEIGHT="44" WIDTH="81" VPOS="1040" HPOS="2243" Content="but"/>
+      </TextLine>
+      <TextLine HEIGHT="45" WIDTH="486" VPOS="1102" HPOS="1840">
+        <String HEIGHT="31" WIDTH="104" VPOS="1115" HPOS="1840" Content="now"/>
+        <String HEIGHT="44" WIDTH="77" VPOS="1103" HPOS="1955" Content="the"/>
+        <String HEIGHT="44" WIDTH="97" VPOS="1102" HPOS="2043" Content="first"/>
+        <String HEIGHT="44" WIDTH="177" VPOS="1102" HPOS="2149" Content="blooms"/>
+      </TextLine>
+      <TextLine HEIGHT="45" WIDTH="513" VPOS="1166" HPOS="1828">
+        <String HEIGHT="44" WIDTH="113" VPOS="1166" HPOS="1828" Content="have"/>
+        <String HEIGHT="44" WIDTH="191" VPOS="1166" HPOS="1953" Content="decided"/>
+        <String HEIGHT="37" WIDTH="47" VPOS="1174" HPOS="2155" Content="to"/>
+        <String HEIGHT="44" WIDTH="127" VPOS="1166" HPOS="2213" Content="show"/>
+      </TextLine>
+      <TextLine HEIGHT="56" WIDTH="531" VPOS="1229" HPOS="1815">
+        <String HEIGHT="43" WIDTH="74" VPOS="1242" HPOS="1815" Content="up."/>
+        <String HEIGHT="43" WIDTH="80" VPOS="1231" HPOS="1904" Content="For"/>
+        <String HEIGHT="44" WIDTH="131" VPOS="1229" HPOS="1994" Content="those"/>
+        <String HEIGHT="45" WIDTH="209" VPOS="1229" HPOS="2137" Content="unfamil-"/>
+      </TextLine>
+      <TextLine HEIGHT="58" WIDTH="461" VPOS="1292" HPOS="1853">
+        <String HEIGHT="49" WIDTH="76" VPOS="1295" HPOS="1853" Content="iar,"/>
+        <String HEIGHT="57" WIDTH="184" VPOS="1293" HPOS="1941" Content="daphne"/>
+        <String HEIGHT="45" WIDTH="176" VPOS="1292" HPOS="2137" Content="blooms"/>
+      </TextLine>
+      <TextLine HEIGHT="45" WIDTH="498" VPOS="1358" HPOS="1833">
+        <String HEIGHT="44" WIDTH="114" VPOS="1358" HPOS="1833" Content="have"/>
+        <String HEIGHT="31" WIDTH="27" VPOS="1370" HPOS="1960" Content="a"/>
+        <String HEIGHT="37" WIDTH="126" VPOS="1365" HPOS="1999" Content="scent"/>
+        <String HEIGHT="44" WIDTH="97" VPOS="1358" HPOS="2136" Content="that"/>
+        <String HEIGHT="44" WIDTH="90" VPOS="1358" HPOS="2241" Content="will"/>
+      </TextLine>
+      <TextLine HEIGHT="56" WIDTH="448" VPOS="1420" HPOS="1860">
+        <String HEIGHT="43" WIDTH="132" VPOS="1421" HPOS="1860" Content="make"/>
+        <String HEIGHT="43" WIDTH="89" VPOS="1433" HPOS="2003" Content="you"/>
+        <String HEIGHT="44" WIDTH="117" VPOS="1433" HPOS="2104" Content="envy"/>
+        <String HEIGHT="44" WIDTH="78" VPOS="1420" HPOS="2230" Content="the"/>
+      </TextLine>
+      <TextLine HEIGHT="44" WIDTH="514" VPOS="1484" HPOS="1827">
+        <String HEIGHT="42" WIDTH="168" VPOS="1486" HPOS="1827" Content="insects"/>
+        <String HEIGHT="44" WIDTH="102" VPOS="1484" HPOS="2006" Content="who"/>
+        <String HEIGHT="31" WIDTH="76" VPOS="1496" HPOS="2121" Content="are"/>
+        <String HEIGHT="42" WIDTH="132" VPOS="1485" HPOS="2209" Content="small"/>
+      </TextLine>
+      <TextLine HEIGHT="58" WIDTH="545" VPOS="1546" HPOS="1812">
+        <String HEIGHT="57" WIDTH="181" VPOS="1547" HPOS="1812" Content="enough"/>
+        <String HEIGHT="37" WIDTH="46" VPOS="1553" HPOS="2004" Content="to"/>
+        <String HEIGHT="45" WIDTH="51" VPOS="1546" HPOS="2063" Content="fit"/>
+        <String HEIGHT="44" WIDTH="145" VPOS="1547" HPOS="2123" Content="inside"/>
+        <String HEIGHT="44" WIDTH="78" VPOS="1547" HPOS="2279" Content="the"/>
+      </TextLine>
+      <TextLine HEIGHT="58" WIDTH="346" VPOS="1608" HPOS="1911">
+        <String HEIGHT="45" WIDTH="187" VPOS="1609" HPOS="1911" Content="flowers."/>
+        <String HEIGHT="58" WIDTH="148" VPOS="1608" HPOS="2109" Content="(right)"/>
+      </TextLine>
+      <TextLine HEIGHT="59" WIDTH="668" VPOS="1871" HPOS="2471">
+        <String HEIGHT="41" WIDTH="70" VPOS="1875" HPOS="2471" Content="An"/>
+        <String HEIGHT="57" WIDTH="368" VPOS="1872" HPOS="2552" Content="early-blooming"/>
+        <String HEIGHT="47" WIDTH="105" VPOS="1871" HPOS="2931" Content="fruit"/>
+        <String HEIGHT="38" WIDTH="94" VPOS="1879" HPOS="3045" Content="tree"/>
+      </TextLine>
+      <TextLine HEIGHT="44" WIDTH="636" VPOS="1936" HPOS="2489">
+        <String HEIGHT="31" WIDTH="109" VPOS="1948" HPOS="2489" Content="near"/>
+        <String HEIGHT="44" WIDTH="78" VPOS="1936" HPOS="2607" Content="the"/>
+        <String HEIGHT="44" WIDTH="180" VPOS="1937" HPOS="2697" Content="Kaneko"/>
+        <String HEIGHT="43" WIDTH="90" VPOS="1937" HPOS="2889" Content="end"/>
+        <String HEIGHT="44" WIDTH="51" VPOS="1936" HPOS="2990" Content="of"/>
+        <String HEIGHT="44" WIDTH="80" VPOS="1936" HPOS="3045" Content="the"/>
+      </TextLine>
+      <TextLine HEIGHT="58" WIDTH="722" VPOS="1998" HPOS="2446">
+        <String HEIGHT="57" WIDTH="197" VPOS="1999" HPOS="2446" Content="walking"/>
+        <String HEIGHT="58" WIDTH="151" VPOS="1998" HPOS="2652" Content="bridge"/>
+        <String HEIGHT="45" WIDTH="195" VPOS="1999" HPOS="2816" Content="endures"/>
+        <String HEIGHT="31" WIDTH="87" VPOS="2012" HPOS="3021" Content="one"/>
+        <String HEIGHT="45" WIDTH="49" VPOS="1999" HPOS="3119" Content="of"/>
+      </TextLine>
+      <TextLine HEIGHT="44" WIDTH="200" VPOS="2063" HPOS="2706">
+        <String HEIGHT="44" WIDTH="200" VPOS="2063" HPOS="2706" Content="Winter's"/>
+      </TextLine>
+      <TextLine HEIGHT="59" WIDTH="530" VPOS="2123" HPOS="2541">
+        <String HEIGHT="43" WIDTH="85" VPOS="2126" HPOS="2541" Content="last"/>
+        <String HEIGHT="55" WIDTH="243" VPOS="2127" HPOS="2637" Content="mornings."/>
+        <String HEIGHT="57" WIDTH="177" VPOS="2123" HPOS="2894" Content="(below)"/>
+      </TextLine>
+      <TextLine HEIGHT="60" WIDTH="1327" VPOS="2573" HPOS="1038">
+        <String HEIGHT="42" WIDTH="37" VPOS="2579" HPOS="1038" Content="A"/>
+        <String HEIGHT="58" WIDTH="213" VPOS="2575" HPOS="1086" Content="perfectly"/>
+        <String HEIGHT="45" WIDTH="165" VPOS="2575" HPOS="1311" Content="arched"/>
+        <String HEIGHT="44" WIDTH="201" VPOS="2576" HPOS="1488" Content="rainbow"/>
+        <String HEIGHT="44" WIDTH="326" VPOS="2575" HPOS="1701" Content="demonstrates"/>
+        <String HEIGHT="43" WIDTH="100" VPOS="2574" HPOS="2039" Content="how"/>
+        <String HEIGHT="44" WIDTH="77" VPOS="2573" HPOS="2152" Content="the"/>
+        <String HEIGHT="44" WIDTH="124" VPOS="2574" HPOS="2242" Content="clash"/>
+      </TextLine>
+      <TextLine HEIGHT="47" WIDTH="822" VPOS="2638" HPOS="1292">
+        <String HEIGHT="45" WIDTH="206" VPOS="2639" HPOS="1292" Content="between"/>
+        <String HEIGHT="45" WIDTH="143" VPOS="2639" HPOS="1508" Content="forces"/>
+        <String HEIGHT="43" WIDTH="159" VPOS="2640" HPOS="1663" Content="results"/>
+        <String HEIGHT="41" WIDTH="48" VPOS="2641" HPOS="1835" Content="in"/>
+        <String HEIGHT="44" WIDTH="220" VPOS="2638" HPOS="1894" Content="beautiful"/>
+      </TextLine>
+      <TextLine HEIGHT="61" WIDTH="1261" VPOS="2698" HPOS="1073">
+        <String HEIGHT="45" WIDTH="156" VPOS="2704" HPOS="1073" Content="colors."/>
+        <String HEIGHT="56" WIDTH="186" VPOS="2704" HPOS="1242" Content="Explain"/>
+        <String HEIGHT="50" WIDTH="102" VPOS="2703" HPOS="1439" Content="this,"/>
+        <String HEIGHT="31" WIDTH="51" VPOS="2716" HPOS="1555" Content="so"/>
+        <String HEIGHT="44" WIDTH="145" VPOS="2703" HPOS="1620" Content="called"/>
+        <String HEIGHT="44" WIDTH="198" VPOS="2703" HPOS="1778" Content="&quot;science"/>
+        <String HEIGHT="45" WIDTH="224" VPOS="2700" HPOS="1986" Content="students&quot;"/>
+        <String HEIGHT="56" WIDTH="78" VPOS="2698" HPOS="2226" Content="(no"/>
+        <String HEIGHT="43" WIDTH="19" VPOS="2702" HPOS="2314" Content="I"/>
+      </TextLine>
+      <TextLine HEIGHT="59" WIDTH="645" VPOS="2734" HPOS="264">
+        <String HEIGHT="56" WIDTH="219" VPOS="2737" HPOS="264" Content="Reigning"/>
+        <String HEIGHT="45" WIDTH="116" VPOS="2735" HPOS="493" Content="from"/>
+        <String HEIGHT="44" WIDTH="78" VPOS="2735" HPOS="620" Content="the"/>
+        <String HEIGHT="45" WIDTH="136" VPOS="2735" HPOS="710" Content="north"/>
+        <String HEIGHT="45" WIDTH="51" VPOS="2734" HPOS="858" Content="of"/>
+      </TextLine>
+      <TextLine HEIGHT="57" WIDTH="969" VPOS="2764" HPOS="1219">
+        <String HEIGHT="44" WIDTH="121" VPOS="2767" HPOS="1219" Content="don't"/>
+        <String HEIGHT="43" WIDTH="133" VPOS="2767" HPOS="1350" Content="know"/>
+        <String HEIGHT="43" WIDTH="120" VPOS="2768" HPOS="1492" Content="what"/>
+        <String HEIGHT="43" WIDTH="237" VPOS="2767" HPOS="1621" Content="refraction"/>
+        <String HEIGHT="45" WIDTH="50" VPOS="2764" HPOS="1870" Content="of"/>
+        <String HEIGHT="56" WIDTH="110" VPOS="2765" HPOS="1927" Content="light"/>
+        <String HEIGHT="42" WIDTH="39" VPOS="2766" HPOS="2046" Content="is"/>
+        <String HEIGHT="43" WIDTH="92" VPOS="2764" HPOS="2097" Content="and"/>
+      </TextLine>
+      <TextLine HEIGHT="59" WIDTH="779" VPOS="2798" HPOS="194">
+        <String HEIGHT="54" WIDTH="188" VPOS="2802" HPOS="194" Content="Europe,"/>
+        <String HEIGHT="44" WIDTH="78" VPOS="2800" HPOS="395" Content="the"/>
+        <String HEIGHT="44" WIDTH="212" VPOS="2799" HPOS="486" Content="daffodils"/>
+        <String HEIGHT="46" WIDTH="121" VPOS="2798" HPOS="710" Content="don't"/>
+        <String HEIGHT="44" WIDTH="131" VPOS="2798" HPOS="842" Content="mind"/>
+      </TextLine>
+      <TextLine HEIGHT="59" WIDTH="1018" VPOS="2826" HPOS="1193">
+        <String HEIGHT="41" WIDTH="79" VPOS="2843" HPOS="1193" Content="yes"/>
+        <String HEIGHT="41" WIDTH="16" VPOS="2832" HPOS="1283" Content="I"/>
+        <String HEIGHT="44" WIDTH="133" VPOS="2830" HPOS="1310" Content="think"/>
+        <String HEIGHT="43" WIDTH="225" VPOS="2831" HPOS="1454" Content="rainbows"/>
+        <String HEIGHT="31" WIDTH="76" VPOS="2842" HPOS="1691" Content="are"/>
+        <String HEIGHT="43" WIDTH="134" VPOS="2829" HPOS="1778" Content="made"/>
+        <String HEIGHT="55" WIDTH="58" VPOS="2828" HPOS="1925" Content="by"/>
+        <String HEIGHT="50" WIDTH="218" VPOS="2826" HPOS="1993" Content="wizards)."/>
+      </TextLine>
+      <TextLine HEIGHT="58" WIDTH="741" VPOS="2861" HPOS="212">
+        <String HEIGHT="44" WIDTH="79" VPOS="2864" HPOS="212" Content="the"/>
+        <String HEIGHT="44" WIDTH="114" VPOS="2863" HPOS="303" Content="cold."/>
+        <String HEIGHT="57" WIDTH="117" VPOS="2862" HPOS="430" Content="They"/>
+        <String HEIGHT="32" WIDTH="76" VPOS="2875" HPOS="558" Content="are"/>
+        <String HEIGHT="41" WIDTH="47" VPOS="2865" HPOS="646" Content="in"/>
+        <String HEIGHT="45" WIDTH="83" VPOS="2861" HPOS="705" Content="full"/>
+        <String HEIGHT="44" WIDTH="153" VPOS="2861" HPOS="800" Content="bloom"/>
+      </TextLine>
+      <TextLine HEIGHT="57" WIDTH="720" VPOS="2926" HPOS="223">
+        <String HEIGHT="44" WIDTH="61" VPOS="2926" HPOS="223" Content="all"/>
+        <String HEIGHT="31" WIDTH="106" VPOS="2940" HPOS="296" Content="over"/>
+        <String HEIGHT="43" WIDTH="204" VPOS="2937" HPOS="412" Content="campus,"/>
+        <String HEIGHT="57" WIDTH="243" VPOS="2926" HPOS="629" Content="especially"/>
+        <String HEIGHT="33" WIDTH="60" VPOS="2937" HPOS="883" Content="on"/>
+      </TextLine>
+      <TextLine HEIGHT="62" WIDTH="1301" VPOS="2920" HPOS="1056">
+        <String HEIGHT="42" WIDTH="208" VPOS="2927" HPOS="1056" Content="Bearcats"/>
+        <String HEIGHT="56" WIDTH="130" VPOS="2926" HPOS="1276" Content="enjoy"/>
+        <String HEIGHT="31" WIDTH="27" VPOS="2938" HPOS="1417" Content="a"/>
+        <String HEIGHT="56" WIDTH="86" VPOS="2925" HPOS="1456" Content="day"/>
+        <String HEIGHT="44" WIDTH="50" VPOS="2923" HPOS="1553" Content="of"/>
+        <String HEIGHT="43" WIDTH="220" VPOS="2924" HPOS="1610" Content="sunshine"/>
+        <String HEIGHT="59" WIDTH="58" VPOS="2921" HPOS="1843" Content="by"/>
+        <String HEIGHT="33" WIDTH="28" VPOS="2934" HPOS="1911" Content="a"/>
+        <String HEIGHT="55" WIDTH="108" VPOS="2921" HPOS="1951" Content="high"/>
+        <String HEIGHT="42" WIDTH="96" VPOS="2921" HPOS="2072" Content="mill"/>
+        <String HEIGHT="44" WIDTH="178" VPOS="2926" HPOS="2179" Content="stream,"/>
+      </TextLine>
+      <TextLine HEIGHT="60" WIDTH="782" VPOS="2986" HPOS="192">
+        <String HEIGHT="43" WIDTH="79" VPOS="2990" HPOS="192" Content="the"/>
+        <String HEIGHT="37" WIDTH="112" VPOS="2997" HPOS="280" Content="west"/>
+        <String HEIGHT="44" WIDTH="90" VPOS="2989" HPOS="403" Content="end"/>
+        <String HEIGHT="44" WIDTH="51" VPOS="2989" HPOS="505" Content="of"/>
+        <String HEIGHT="44" WIDTH="78" VPOS="2988" HPOS="562" Content="the"/>
+        <String HEIGHT="57" WIDTH="134" VPOS="2989" HPOS="652" Content="quad."/>
+        <String HEIGHT="57" WIDTH="173" VPOS="2986" HPOS="801" Content="(above)"/>
+      </TextLine>
+      <TextLine HEIGHT="62" WIDTH="1156" VPOS="2983" HPOS="1133">
+        <String HEIGHT="57" WIDTH="313" VPOS="2988" HPOS="1133" Content="conveniently"/>
+        <String HEIGHT="42" WIDTH="77" VPOS="2988" HPOS="1454" Content="the"/>
+        <String HEIGHT="58" WIDTH="86" VPOS="2986" HPOS="1544" Content="day"/>
+        <String HEIGHT="43" WIDTH="151" VPOS="2985" HPOS="1641" Content="before"/>
+        <String HEIGHT="43" WIDTH="78" VPOS="2984" HPOS="1803" Content="the"/>
+        <String HEIGHT="43" WIDTH="97" VPOS="2985" HPOS="1892" Content="first"/>
+        <String HEIGHT="41" WIDTH="182" VPOS="2986" HPOS="1999" Content="Bearcat"/>
+        <String HEIGHT="58" WIDTH="96" VPOS="2983" HPOS="2193" Content="Day"/>
+      </TextLine>
+      <TextLine HEIGHT="59" WIDTH="720" VPOS="3846" HPOS="2450">
+        <String HEIGHT="42" WIDTH="132" VPOS="3852" HPOS="2450" Content="Some"/>
+        <String HEIGHT="43" WIDTH="198" VPOS="3861" HPOS="2593" Content="younger"/>
+        <String HEIGHT="47" WIDTH="367" VPOS="3846" HPOS="2802" Content="rhododendrons"/>
+      </TextLine>
+      <TextLine HEIGHT="59" WIDTH="648" VPOS="3911" HPOS="2487">
+        <String HEIGHT="33" WIDTH="110" VPOS="3928" HPOS="2487" Content="near"/>
+        <String HEIGHT="43" WIDTH="78" VPOS="3914" HPOS="2608" Content="the"/>
+        <String HEIGHT="43" WIDTH="97" VPOS="3914" HPOS="2697" Content="mill"/>
+        <String HEIGHT="36" WIDTH="167" VPOS="3923" HPOS="2805" Content="stream"/>
+        <String HEIGHT="59" WIDTH="151" VPOS="3911" HPOS="2984" Content="bridge"/>
+      </TextLine>
+      <TextLine HEIGHT="60" WIDTH="713" VPOS="3976" HPOS="2454">
+        <String HEIGHT="57" WIDTH="191" VPOS="3979" HPOS="2454" Content="jumped"/>
+        <String HEIGHT="44" WIDTH="78" VPOS="3977" HPOS="2656" Content="the"/>
+        <String HEIGHT="44" WIDTH="94" VPOS="3990" HPOS="2745" Content="gun"/>
+        <String HEIGHT="45" WIDTH="94" VPOS="3976" HPOS="2851" Content="and"/>
+        <String HEIGHT="45" WIDTH="213" VPOS="3976" HPOS="2953" Content="bloomed"/>
+      </TextLine>
+      <TextLine HEIGHT="57" WIDTH="738" VPOS="4040" HPOS="2443">
+        <String HEIGHT="44" WIDTH="151" VPOS="4042" HPOS="2443" Content="before"/>
+        <String HEIGHT="44" WIDTH="78" VPOS="4042" HPOS="2606" Content="the"/>
+        <String HEIGHT="45" WIDTH="101" VPOS="4040" HPOS="2696" Content="cold"/>
+        <String HEIGHT="41" WIDTH="196" VPOS="4041" HPOS="2807" Content="finished"/>
+        <String HEIGHT="57" WIDTH="167" VPOS="4040" HPOS="3015" Content="having"/>
+      </TextLine>
+      <TextLine HEIGHT="59" WIDTH="743" VPOS="4103" HPOS="2440">
+        <String HEIGHT="42" WIDTH="56" VPOS="4108" HPOS="2440" Content="its"/>
+        <String HEIGHT="44" WIDTH="87" VPOS="4118" HPOS="2507" Content="say."/>
+        <String HEIGHT="43" WIDTH="88" VPOS="4105" HPOS="2604" Content="The"/>
+        <String HEIGHT="57" WIDTH="162" VPOS="4105" HPOS="2703" Content="largest"/>
+        <String HEIGHT="49" WIDTH="176" VPOS="4105" HPOS="2875" Content="shrubs,"/>
+        <String HEIGHT="43" WIDTH="119" VPOS="4103" HPOS="3064" Content="how-"/>
+      </TextLine>
+      <TextLine HEIGHT="58" WIDTH="715" VPOS="4166" HPOS="2456">
+        <String HEIGHT="39" WIDTH="111" VPOS="4182" HPOS="2456" Content="ever,"/>
+        <String HEIGHT="31" WIDTH="75" VPOS="4182" HPOS="2581" Content="are"/>
+        <String HEIGHT="46" WIDTH="89" VPOS="4166" HPOS="2668" Content="still"/>
+        <String HEIGHT="58" WIDTH="155" VPOS="4167" HPOS="2768" Content="biding"/>
+        <String HEIGHT="46" WIDTH="116" VPOS="4167" HPOS="2935" Content="their"/>
+        <String HEIGHT="42" WIDTH="113" VPOS="4168" HPOS="3059" Content="time"/>
+      </TextLine>
+      <TextLine HEIGHT="59" WIDTH="464" VPOS="4230" HPOS="2580">
+        <String HEIGHT="57" WIDTH="227" VPOS="4232" HPOS="2580" Content="alongside"/>
+        <String HEIGHT="45" WIDTH="77" VPOS="4230" HPOS="2820" Content="the"/>
+        <String HEIGHT="35" WIDTH="135" VPOS="4243" HPOS="2910" Content="roses."/>
+      </TextLine>
+    </Page>
+  </Layout>
+</alto>

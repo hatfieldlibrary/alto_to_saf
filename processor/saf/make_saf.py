@@ -10,9 +10,13 @@ from processor.saf.utils.extract_metadata import ExtractMetadata
 dspace_metadata_schema = ('<dublin_core schema="dspace">'
                           '<dcvalue element="iiif" qualifier="enabled">true</dcvalue>'
                           '</dublin_core>')
+# Enable IIIF search for the item.
+iiif_metadata_schema = ('<dublin_core schema="iiif">'
+                          '<dcvalue element="search" qualifier="enabled">true</dcvalue>'
+                          '</dublin_core>')
 
 
-def to_saf(input_dir: str, saf_dir: str, bundle: str):
+def to_saf(input_dir: str, saf_dir: str, bundle: str, image_format: str):
     """
     Creates SAF import files from the contents of a directory of mets/alto files.
     The input directory must contain files for a single item (not multiple items).
@@ -35,13 +39,16 @@ def to_saf(input_dir: str, saf_dir: str, bundle: str):
     dc_tree = ET.ElementTree(dc_metadata)
     dc_tree.write(saf_dir + '/dublin_core.xml', encoding="UTF-8", xml_declaration="True")
     path = Path(input_dir)
-    process_files(path, saf_dir, bundle)
+    process_files(path, saf_dir, bundle, image_format)
 
     with open(saf_dir + '/metadata_dspace.xml', 'w') as dspace_meta:
         dspace_meta.write(dspace_metadata_schema)
 
+    with open(saf_dir + '/metadata_iiif.xml', 'w') as dspace_meta:
+        dspace_meta.write(iiif_metadata_schema)
 
-def process_files(path: Path, saf_dir: str, bundle: str):
+
+def process_files(path: Path, saf_dir: str, bundle: str, image_format: str):
     """
 
     :param path: path to the input directory
@@ -60,14 +67,29 @@ def process_files(path: Path, saf_dir: str, bundle: str):
             if file.suffix == '.xml':
                 write_contents_other_bundle(saf_dir, file.name)
 
-            if file.suffix == '.jp2':
+            if file.suffix == '.jp2' and image_format == 'jp2':
                 write_contents_image_bundle(saf_dir, file.name, bundle)
+            # Copy the thumbnail image
+            elif file.name == 'thumbnail.jpg.jpg':
+                write_contents_thumbnail_bundle(saf_dir, file.name)
+            elif file.suffix == '.jpg' and image_format == 'jpg':
+                write_contents_image_bundle(saf_dir, file.name, bundle)
+            elif file.suffix == '.pdf':
+                write_contents_original_bundle(saf_dir, file.name)
+
 
 
 def write_contents_other_bundle(saf_dir, file):
     with open(saf_dir + '/contents', 'a') as content:
         content.write(file + '\tbundle:OtherContent\n')
 
+def write_contents_thumbnail_bundle(saf_dir, file):
+    with open(saf_dir + '/contents', 'a') as content:
+        content.write(file + '\tbundle:THUMBNAIL\n')
+
+def write_contents_original_bundle(saf_dir, file):
+    with open(saf_dir + '/contents', 'a') as content:
+        content.write(file + '\n')
 
 def write_contents_image_bundle(saf_dir, file, bundle):
     fh = open(saf_dir + '/contents', 'a')
